@@ -24,8 +24,6 @@ class Sort{
                 numbers[curr] = stoi(line);
                 curr += 1;
         }
-
-        // Tutorial: http://www.cplusplus.com/doc/tutorial/files/
     }
 
     // Destructor
@@ -46,7 +44,7 @@ class Sort{
 
     }
 
-    // insertionsort: DONE!
+    // insertionsort
     void insertionsort(int arr[], int left, int right){
         auto start = std::chrono::steady_clock::now();    
 	insertionsortHelper(arr, left, right);
@@ -103,7 +101,7 @@ class Sort{
     }
 
 
-    // mergesort: DONE!
+    // mergesort
     void mergesort() {
         auto start = std::chrono::steady_clock::now();    
         mergesortHelper(this->numbers, 0, 9999);
@@ -113,7 +111,7 @@ class Sort{
 		<< " ns" << std::endl;
     }
 
-    // timsort: DONE!
+    // timsort
     void timsort() {
         auto start = std::chrono::steady_clock::now();
     	for (int ii = 0; ii < 1000; ii+=625) {
@@ -131,11 +129,6 @@ class Sort{
 		<< std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count()
 		<< " ns" << std::endl;
     }
-
-    private:
-    // Any private data member variables or functions here
-    // *hint* You will need to store in the data you read.
-
 };
 
 
